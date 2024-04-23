@@ -71,7 +71,8 @@ public class Welcome {
 					menuCartClear();
 					break;
 				case 4: // System.out.println("4. 장바구니에 항목 추가하기");
-					menuCartAddItem(mBook);
+					//menuCartAddItem(mBook);
+					menuCartAddItem(mbookList);
 					break;
 				case 5: // System.out.println("5. 장바구니에 항목 수량 줄이기");
 					menuCartRemoveItemCount();
