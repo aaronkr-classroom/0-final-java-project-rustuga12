@@ -1,3 +1,5 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.util.Scanner;
 
 import com.market.member.Admin;
@@ -11,6 +13,8 @@ public class Welcome {
 	static CartItem[] mCartItem = new CartItem[NUM_BOOK];
 	static int mCartCount = 0;
 	static User mUser;
+	
+	
 
 	public static void main(String[] args) {
 
@@ -99,6 +103,56 @@ public class Welcome {
 			}
 		}
 	}
+	
+	public static int totalFileToBookList() {
+		try {
+			FileReader fr = new FileReader ("book.txt");
+			BufferedReader reader = new BufferedReader(fr);
+			
+			String str;
+			int num = 0;
+			while ((str = reader.readLine()) !=null) {
+				if(str.contains("ISBN"))
+					++ num;
+			}
+			
+			reader.close();
+			fr.close();
+			return num;
+			
+		} catch(Exception e) {
+			System.out.println(e);
+		}
+		return 0;
+	}
+	
+	public static void setFileToBookList(Book[] booklist) {
+		try {
+			FileReader fr = new FileReader("book.txt");
+			BufferedReader reader = new BufferedReader(fr);
+			
+			String str2;
+			String[] readBook = new String[7];
+			int count = 0;
+			
+			while ((str2 = reader.readLine()) != null) {
+				if (str2.contains("ISBN")) {
+					readBook[0] = str2;
+					readBook[1] = reader.readLine();
+					readBook[2] = reader.readLine();
+					readBook[3] = reader.readLine();
+					readBook[4] = reader.readLine();
+					readBook[5] = reader.readLine();
+					readBook[6] = reader.readLine();
+		}
+			booklist[count++] = new Book(readBook[0], readBook[1], Integer.
+			parseInt(readBook[2], readBook[3], readBook[4], readBook[5],
+					readBook[6]);
+			
+					
+			
+			
+
 
 	public static void menuIntroduction() {
 		System.out.println("***********************************************");
