@@ -5,6 +5,7 @@ import java.util.Scanner;
 import com.market.member.Admin;
 import com.market.member.Person;
 import com.market.member.User;
+import java.util.ArrayList;
 
 public class Welcome {
 
@@ -17,6 +18,8 @@ public class Welcome {
 	
 
 	public static void main(String[] args) {
+		
+	}
 
 		String[][] mBook = new String[NUM_BOOK][NUM_ITEM];
 
@@ -126,7 +129,7 @@ public class Welcome {
 		return 0;
 	}
 	
-	public static void setFileToBookList(Book[] booklist) {
+	public static void BookList(ArrayList<Book> booklist) {
 		try {
 			FileReader fr = new FileReader("book.txt");
 			BufferedReader reader = new BufferedReader(fr);
@@ -145,9 +148,7 @@ public class Welcome {
 					readBook[5] = reader.readLine();
 					readBook[6] = reader.readLine();
 		}
-			booklist[count++] = new Book(readBook[0], readBook[1], Integer.
-			parseInt(readBook[2], readBook[3], readBook[4], readBook[5],
-					readBook[6]);
+			
 			
 					
 			
@@ -310,4 +311,5 @@ public class Welcome {
 		}
 		return flag;
 	}
+
 } //Welcome 클래스 끝 */
