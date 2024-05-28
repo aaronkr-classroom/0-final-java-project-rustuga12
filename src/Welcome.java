@@ -2,6 +2,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.Scanner;
 
+import com.market.bookitem.Book;
 import com.market.member.Admin;
 import com.market.member.Person;
 import com.market.member.User;
