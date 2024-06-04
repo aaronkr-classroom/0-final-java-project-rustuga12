@@ -1,3 +1,4 @@
+import com.market.bookitem.Book;
 
 public interface CartInterface {
 	void printBookLIST(Book[] p);

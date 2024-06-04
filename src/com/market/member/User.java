@@ -1,14 +1,20 @@
 package com.market.member;
 
-public class User extends Person {
+public class UserInit {
+	private static User mUser;
 	
 
 
-	public User(String name, int phone) {
-		super(name, phone);
+	public static void setmUser(User mUser) {
+		UserInIt.mUser = mUser;
 	}
 	
-	public User (String username, int phone, String address) {
-		super(username, phone, address);
+	public static void init(String name, int phone) {
+		mUser = new User(name, phone);
+	}
+}
+
+	public static User getmUser() {
+		return mUser;
 	}
 }
