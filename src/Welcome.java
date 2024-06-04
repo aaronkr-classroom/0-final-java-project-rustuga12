@@ -24,13 +24,13 @@ public class Welcome {
 		String[][] mBook = new String[NUM_BOOK][NUM_ITEM];
 
 		Scanner input = new Scanner(System.in);
-		System.out.print("당신의 이름을 입력하세요 : ");
+		System.out.println("당신의 이름을 입력하세요 : ");
 		String userName = input.next();
 
 		System.out.print("연락처를 입력하세요 : ");
 		int userMobile = input.nextInt();
 
-		mUser = new User(userName, userMobile);
+		// mUser = new User(userName, userMobile);
 		// System.out.println("Welcome to Shopping Mall");
 		// System.out.println("Welcome to Book Market!");
 
@@ -58,7 +58,7 @@ public class Welcome {
 			menuIntroduction();
 			System.out.print("메뉴 번호를 선택해주세요 ");
 			int n = input.nextInt();
-			// System.out.println(n +"번을 선택했습니다.");
+			System.out.println(n +"번을 선택했습니다.");
 
 			/*
 			if (n < 1 || n > 8) {
@@ -105,7 +105,7 @@ public class Welcome {
 				}
 			}
 		}
-	}
+	
 	
 	public static int totalFileToBookList() {
 		try {
