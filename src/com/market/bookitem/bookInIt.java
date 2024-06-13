@@ -17,7 +17,7 @@ public class bookInIt {
 	public static int totalFileToBookList() {
 		try {
 			FileReader fr = new FileReader("book.txt");
-			BufferedReader reader = new BufferedREADER(fr);
+			BufferedReader reader = new BufferedReader(fr);
 			
 			String str; 
 			int num = 0;
@@ -38,13 +38,13 @@ public class bookInIt {
 
 	public static void setFileToBookList(ArrayList<Book> booklist) {
 		try {
-			FileReader fr = new File Reader("book.txt");
+			FileReader fr = new FileReader("book.txt");
 			BufferedReader reader = new BufferedReader(fr);
 			
 			String str2;
 			String[] readBook = new String[7];
 			
-			while((str2 = reader.readLine()) != null {
+			while((str2 = reader.readLine()) != null) {
 				if (str2.contains("ISBN")) {
 					readBook[0] = str2;
 					readBook[1] = reader.readLine();
@@ -62,9 +62,7 @@ public class bookInIt {
 			reader.close();
 			fr.close();
 			
-				}
-				reader.close();
-				fr.close();
+			
 			} catch(Exception e) {
 				System.out.println(e);
 			}
@@ -75,9 +73,17 @@ public class bookInIt {
 }
 		
 	
-	public static void setBookList(ArrayList<Book> mBookList) {
-		BookInIt.mBookList = mBOOKList;
+		public static void setBookList(ArrayList<Book> mBookList) {
+			bookInIt.mBookList = mBookList;
 
-	
-
+		}
+		
+		public static int getmTotalBook() {
+			return mTotalBook;
+			
+		}
+		
+		public static void setmTotalBook(int mTotalBook) {
+			bookInIt.mTotalBook = mTotalBook;
+		}
 }
