@@ -15,7 +15,7 @@ public class Welcome {
 	
 	public static void main(String[] args) {
 		
-	}
+	
 		String[][] mBook = new String[NUM_BOOK][NUM_ITEM];
 
 		Scanner input = new Scanner(System.in);
